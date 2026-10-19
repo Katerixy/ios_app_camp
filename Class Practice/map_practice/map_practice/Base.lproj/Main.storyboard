@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="map_practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqI-O5-Poo">
+                                <rect key="frame" x="0.0" y="118" width="393" height="617"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oqr-ik-UgJ">
+                                <rect key="frame" x="0.0" y="735" width="393" height="49"/>
+                                <items>
+                                    <barButtonItem title="Zoom" id="6kz-Ns-Pjp">
+                                        <connections>
+                                            <action selector="zoomIn:" destination="BYZ-38-t0r" id="zc1-5R-8Y9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Type" id="CKR-SF-Mwa">
+                                        <connections>
+                                            <action selector="changeMapType:" destination="BYZ-38-t0r" id="kGt-Zq-hzi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sqI-O5-Poo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6f7-uW-8RB"/>
+                            <constraint firstItem="Oqr-ik-UgJ" firstAttribute="top" secondItem="sqI-O5-Poo" secondAttribute="bottom" id="8OR-4T-sQX"/>
+                            <constraint firstItem="Oqr-ik-UgJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DbH-Ou-v2k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oqr-ik-UgJ" secondAttribute="trailing" id="FbW-VV-iQg"/>
+                            <constraint firstItem="Oqr-ik-UgJ" firstAttribute="top" secondItem="sqI-O5-Poo" secondAttribute="bottom" id="RjB-HP-6k0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sqI-O5-Poo" secondAttribute="trailing" id="enK-gN-8Oc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Oqr-ik-UgJ" secondAttribute="bottom" id="oB0-T6-Vd2"/>
+                            <constraint firstItem="sqI-O5-Poo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pni-jg-Zv1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="sqI-O5-Poo" id="OSo-ml-qFS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
